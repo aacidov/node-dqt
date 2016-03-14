@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <ul>
+        <li><a href="http://vk.com">vk</a></li>
+        <li><a href="http://facebook.com">facebook</a></li>
+        <li><a href="http://yandex.ru">yandex</a></li>
+        <li><a href="http://google.ru">google</a></li>
+      </ul>
+      <button type="button" id="button">Choose</button>
+      <script type="text/javascript" src="dqt.browser.js"></script>
+      <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+      <script type="text/javascript">
+        var links = Array.prototype.slice.apply(document.querySelectorAll('a'));
+        var groups = DQT.group(links);
+        var dqt = new DQT(groups);
+        var prev;
+        dqt.on('step', (el, x, y)=>{
+          if (prev!=null) prev.toggle( "bounce" )
+          prev = ($(el).toggle( "bounce" ).focus());
+        }).on('choosen', (el)=>{
+
+          console.log('chosse',el);
+          if (Array.isArray(el)) return;
+          window.location.replace(el.href);
+        });
+        document.getElementById('button').onclick = ()=>{
+          dqt.emit('click');
+        };
+      </script>
+  </body>
+</html>

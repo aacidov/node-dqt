@@ -1,0 +1,26 @@
+{
+  "name": "dqt",
+  "version": "0.0.0",
+  "description": "Technology for create one button controlled interfaces.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js",
+    "browserify":"browserify index.js > dqt.browser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ibakaidov/node-dqt.git"
+  },
+  "keywords": [
+    "disables",
+    "one",
+    "button",
+    "interface"
+  ],
+  "author": "ibakaidov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibakaidov/node-dqt/issues"
+  },
+  "homepage": "https://github.com/ibakaidov/node-dqt#readme"
+}
