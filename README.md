@@ -78,7 +78,29 @@ process.stdin.on('data', (data)=>{
 
 ## Scripts
 
- - **npm run test** : `node test.js`
+- **npm run test** : `node test.js`
+- **npm run browserify** : `browserify index.js > dqt.browser.js`
+
+## API
+DQT extends EventEmitter. You  create object of DQT.
+
+### DQT
+
+Class representing dqt model.
+
+#### constructor
+
+Create a dqt.
+
+##### Params:
+
+* **array** *set* - The set for chossen.
+* **number** *interval* - The timeout of choose.
+
+#### Events
+* **step**, call in each timeout, Params is choosen element {Object} and x, y {number}
+* **choose**, call when user choose something, group or element.
+* **click**, you should emit it, oh you should do it.
 
 ## Contributing
 

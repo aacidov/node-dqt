@@ -1,9 +1,13 @@
 'use strict';
 
 var ee = require("events");
-
+/** Class representing dqt model. */
 class DQT  extends ee{
-
+  /**
+  * Create a dqt.
+  * @param {array} set - The set for chossen.
+  * @param {number} interval - The timeout of choose.
+  */
     constructor(set, interval){
         super();
 

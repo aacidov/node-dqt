@@ -1,6 +1,6 @@
 {
   "name": "dqt",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Technology for create one button controlled interfaces.",
   "main": "index.js",
   "scripts": {
